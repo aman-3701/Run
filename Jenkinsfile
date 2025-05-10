@@ -2,6 +2,12 @@
 pipeline {
     agent any
     stages {
+        stage("Build Jar"){
+            steps{
+                sh 'mvn clean package'
+            }
+
+        }
         stage('Docker') {
             steps{
                 
