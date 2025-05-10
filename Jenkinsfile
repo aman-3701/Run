@@ -4,11 +4,7 @@ pipeline {
     agent any
     stages {
         stage('test') {
-            steps {
-                script {
-                    clone()
-                }
-            }
+            sh ' docker login  -u amandevops8080/test -p iAdmin@123
         }
     }
 }
